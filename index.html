@@ -163,34 +163,21 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Scroll to top button behavior
-    const scrollBtn = document.getElementById("scrollTop");
-    window.onscroll = function () {
-      scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
-    };
-    window.scrollTo({ top: 0, behavior: "smooth" });
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    window.scrollToTop = scrollToTop;
-
-    // Set particles height based on header
-    const particles = document.getElementById('particles-js');
+  window.addEventListener('load', () => {
+    // Adjust particles background to not overlap navbar
     const header = document.querySelector('header');
-    const headerHeight = header.offsetHeight;
+    const particles = document.getElementById('particles-js');
 
+    const headerHeight = header.offsetHeight;
     particles.style.top = headerHeight + 'px';
     particles.style.height = `calc(100% - ${headerHeight}px)`;
 
-    // Initialize Particles.js
     particlesJS('particles-js', {
       particles: {
-        number: { value: 50 },
+        number: { value: 60 },
         color: { value: "#facc15" },
         shape: { type: "circle" },
-        opacity: { value: 0.5 },
+        opacity: { value: 0.4 },
         size: { value: 3 },
         line_linked: {
           enable: true,
@@ -201,7 +188,7 @@
         },
         move: {
           enable: true,
-          speed: 3
+          speed: 2
         }
       },
       interactivity: {
@@ -216,8 +203,18 @@
       },
       retina_detect: true
     });
+
+    // Scroll to top logic
+    const scrollBtn = document.getElementById("scrollTop");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    window.scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
   });
 </script>
+
 
 </body>
 </html>
