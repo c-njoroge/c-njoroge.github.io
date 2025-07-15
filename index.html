@@ -15,16 +15,8 @@
       scroll-behavior: smooth;
     }
 
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: #0f172a;
-    }
-
     header {
-      background: transparent;
+      background: #0f172a;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -35,6 +27,15 @@
       color: #facc15;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0f172a;
+      z-index: -1;
     }
 
     section {
@@ -98,9 +99,7 @@
 </head>
 <body>
 
-<!-- Particles Background -->
-<div id="particles-js"></div>
-
+<!-- HEADER/NAVIGATION -->
 <header>
   <div class="typewriter">
     <h1>Clinton Njoroge - Full Stack Developer</h1>
@@ -113,6 +112,10 @@
   </nav>
 </header>
 
+<!-- PARTICLES BACKGROUND (after nav only) -->
+<div id="particles-js"></div>
+
+<!-- CONTENT SECTIONS -->
 <section id="about">
   <h2>About Me</h2>
   <p>
@@ -153,12 +156,30 @@
   <p>🔗 <a href="https://www.linkedin.com/in/clinton-mwangi" target="_blank">LinkedIn Profile</a></p>
 </section>
 
+<!-- SCROLL TO TOP BUTTON -->
 <button id="scrollTop" onclick="scrollToTop()">⬆</button>
 
-<!-- Scripts -->
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  // Particles.js config
+  // Scroll to top button behavior
+  const scrollBtn = document.getElementById("scrollTop");
+  window.onscroll = function () {
+    scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Dynamic particles height adjustment based on header height
+  const particles = document.getElementById('particles-js');
+  const header = document.querySelector('header');
+  const headerHeight = header.offsetHeight;
+
+  particles.style.top = headerHeight + 'px';
+  particles.style.height = `calc(100% - ${headerHeight}px)`;
+
+  // Initialize Particles.js
   particlesJS('particles-js', {
     particles: {
       number: { value: 50 },
@@ -190,15 +211,6 @@
     },
     retina_detect: true
   });
-
-  // Scroll to top button
-  const scrollBtn = document.getElementById("scrollTop");
-  window.onscroll = function () {
-    scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
-  };
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 </script>
 
 </body>
