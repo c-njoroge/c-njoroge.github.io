@@ -1,23 +1,20 @@
-<!-- [START OF FILE] -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clinton Mwangi Njoroge - Software Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinton Mwangi Njoroge | Software Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f0f2f5;
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f9;
       color: #333;
-      position: relative;
       line-height: 1.6;
     }
 
@@ -29,262 +26,227 @@
       z-index: -1;
     }
 
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #2c3e50;
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      z-index: 1000;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      color: #ffffffcc;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
     .container {
-      max-width: 960px;
-      margin: 60px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
       border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       position: relative;
       z-index: 1;
     }
 
     header {
       text-align: center;
-      padding: 30px 0;
-      background-color: #e6f7ff;
-      border-bottom: 1px solid #d0e7f7;
-      border-radius: 8px 8px 0 0;
+      padding-bottom: 1rem;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
-      color: #2c3e50;
+      font-size: 2.5rem;
+      color: #0f172a;
     }
 
     header h2 {
-      font-size: 1.4em;
-      font-weight: normal;
-      color: #555;
+      margin-top: 0.5rem;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #007bff;
+    }
+
+    .button-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .button-bar a {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .button-bar a:hover {
+      background-color: #0056b3;
     }
 
     section {
-      padding: 20px 30px;
-      margin-bottom: 20px;
-      border-radius: 8px;
+      margin-top: 2rem;
     }
 
-    section h2 {
+    section h3 {
       color: #0056b3;
-      font-size: 1.6em;
+      font-size: 1.4rem;
       border-bottom: 2px solid #007bff;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .contact-info {
-      background-color: #eafaea;
-      border-bottom: 1px solid #dcf0dc;
-      text-align: center;
-      padding: 15px 0;
-      margin-bottom: 20px;
-    }
-
-    .contact-info a {
-      color: #007bff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .skills ul {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      gap: 10px;
       padding: 0;
+      gap: 10px;
     }
 
     .skills li {
-      background-color: #d1ecf1;
-      padding: 8px 15px;
+      background: #d1ecf1;
+      padding: 0.5rem 1rem;
       border-radius: 20px;
-      font-size: 0.95em;
+      font-size: 0.9rem;
       color: #0c5460;
+    }
+
+    ul li::marker {
+      color: #007bff;
     }
 
     .referees {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
-      justify-content: space-around;
+      gap: 1rem;
     }
 
-    .referee-item {
+    .referee {
       flex: 1;
       min-width: 260px;
-      max-width: 32%;
-      background-color: #e0f2f7;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      border: 1px solid #cce5ff;
+      background: #f1f9ff;
+      padding: 1rem;
+      border: 1px solid #d0e7f7;
+      border-radius: 6px;
     }
 
-    .experience-item ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .experience-item li::before {
-      content: '•';
+    a {
       color: #007bff;
-      margin-right: 6px;
     }
 
-    #scrollTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #0f172a;
-      color: white;
-      border: none;
-      padding: 0.75rem 1rem;
-      border-radius: 50%;
-      display: none;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    a:hover {
+      text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      .referees {
-        flex-direction: column;
-        align-items: center;
+    .contact p {
+      margin: 0.3rem 0;
+    }
+
+    @media print {
+      .button-bar, #particles-js {
+        display: none;
       }
-      .referee-item {
-        max-width: 100%;
+      body {
+        background: white;
       }
     }
   </style>
 </head>
 <body>
 
+<!-- Particles Background -->
 <div id="particles-js"></div>
-
-<nav>
-  <a href="#profile">About</a>
-  <a href="#education">Education</a>
-  <a href="#work-experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#referees-section">Referees</a>
-</nav>
 
 <div class="container">
   <header>
-    <h1>CLINTON MWANGI NJOROGE</h1>
+    <h1>Clinton Mwangi Njoroge</h1>
     <h2>Software Developer</h2>
+
+    <div class="button-bar">
+      <a href="Clinton_Njoroge_Resume.pdf" target="_blank">📄 Download Resume (PDF)</a>
+      <a href="#" onclick="window.print()">🖨️ Print / Save as PDF</a>
+    </div>
   </header>
 
-  <section class="contact-info">
+  <section class="contact">
+    <h3>Contact</h3>
     <p>📞 +254 743 631 171</p>
     <p>✉️ <a href="mailto:clintonmwangi5@gmail.com">clintonmwangi5@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/clinton-mwangi" target="_blank">LinkedIn</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/clinton-mwangi" target="_blank">linkedin.com/in/clinton-mwangi</a></p>
   </section>
 
-  <section id="profile">
-    <h2>Profile</h2>
-    <p>I am a software developer with strong proficiency in Python and JavaScript, specializing in Django and Vue.js. I've led teams, built tools, and delivered scalable, maintainable applications across diverse domains.</p>
+  <section class="profile">
+    <h3>Profile</h3>
+    <p>I am a software developer with strong proficiency in Python and JavaScript, specializing in Django and Vue.js frameworks. Throughout my career, I've tackled a variety of programming challenges and collaborated with developers from diverse cultural and technical backgrounds. In addition to hands-on development, I have served as a team lead translating client requirements into actionable sprint plans, assigning tasks, and ensuring timely delivery.</p>
   </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>BSc. Computer Science</strong> (2016–2020)</p>
+  <section class="education">
+    <h3>Education</h3>
+    <p><strong>BSC. COMPUTER SCIENCE</strong> — 2016–2020</p>
   </section>
 
-  <section id="work-experience">
-    <h2>Work Experience</h2>
-    <div class="experience-item">
-      <h3>Software Developer, e-KRAAL Innovation Hub</h3>
-      <p><em>Oct 2020 – Jul 2022</em></p>
-      <ul>
-        <li>Built a geospatial data analysis tool using Django and Vue.js</li>
-        <li>Configured secure Linux deployments for internal use</li>
-      </ul>
-    </div>
-    <div class="experience-item">
-      <h3>Full Stack Developer / Tech Lead, BPOseats</h3>
-      <p><em>Mar 2022 – May 2025</em></p>
-      <ul>
-        <li>Led development of a productivity tracking platform</li>
-        <li>Wrote unit tests using Jest and Django test framework</li>
-        <li>Reviewed and refined Figma-based designs with the UI team</li>
-      </ul>
-    </div>
-  </section>
+  <section class="experience">
+    <h3>Work Experience</h3>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
+    <p><strong>Software Developer, e-KRAAL Innovation Hub</strong> <br><em>Oct 2020 – Jul 2022</em></p>
     <ul>
-      <li>Python (Django)</li>
-      <li>JavaScript (Vue.js)</li>
-      <li>PostgreSQL / MySQL / MongoDB</li>
-      <li>Docker / Git / GitLab CI/CD</li>
-      <li>Figma / UI Design</li>
-      <li>Selenium / Postman</li>
-      <li>Unit Testing (Jest, Django)</li>
-      <li>Geospatial Analysis</li>
-      <li>Team Management</li>
-      <li>Tailwind CSS</li>
+      <li>Build and maintain a geographical data analysis tool using Django and Vue.js</li>
+      <li>Develop Linux server configurations to run the software on a local network securely</li>
+    </ul>
+
+    <p><strong>Developer/Technical Lead, BPOseats</strong> <br><em>March 2022 – May 2025</em></p>
+    <ul>
+      <li>Build a productivity monitoring system in Django (Python) and Vue.js (JavaScript)</li>
+      <li>Write Python scripts and unit tests in Python + Jest</li>
+      <li>Review and approve UI designs from Figma</li>
     </ul>
   </section>
 
-  <section id="referees-section">
-    <h2>Referees</h2>
+  <section class="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>Postgres</li>
+      <li>MySQL</li>
+      <li>MongoDB</li>
+      <li>Docker</li>
+      <li>Git / GitLab CI/CD</li>
+      <li>New Relic</li>
+      <li>Ansible</li>
+      <li>Django</li>
+      <li>Vue.js 2/3</li>
+      <li>Unit Testing (Jest, Django)</li>
+      <li>Tailwind CSS</li>
+      <li>Cytoscape.js</li>
+      <li>Geospatial Analysis</li>
+      <li>Figma (UI/UX)</li>
+      <li>Postman</li>
+      <li>Selenium</li>
+      <li>Jira / Slack</li>
+      <li>Sprint Planning / Team Management</li>
+    </ul>
+  </section>
+
+  <section class="referees">
+    <h3>Referees</h3>
     <div class="referees">
-      <div class="referee-item">
-        <h4>Mary Mbuvi</h4>
+      <div class="referee">
+        <p><strong>Mary Mbuvi</strong></p>
         <p>Product Manager</p>
         <p>2m.mbuvi@gmail.com</p>
       </div>
-      <div class="referee-item">
-        <h4>Samuel Maingi</h4>
+      <div class="referee">
+        <p><strong>Samuel Maingi</strong></p>
         <p>Software Developer</p>
         <p>samaingi1@gmail.com</p>
       </div>
-      <div class="referee-item">
-        <h4>Paul Mayero</h4>
+      <div class="referee">
+        <p><strong>Paul Mayero</strong></p>
         <p>Software Developer</p>
-        <p>pmmayero@gmail.com</p>
+        <p>pmmayer@gmail.com</p>
       </div>
     </div>
   </section>
 </div>
 
-<button id="scrollTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">⬆</button>
-
+<!-- Particles.js Script -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-  particlesJS('particles-js', {
+  particlesJS("particles-js", {
     particles: {
-      number: { value: 60 },
+      number: { value: 50 },
       color: { value: "#ffffff" },
       shape: { type: "circle" },
       opacity: { value: 0.3 },
@@ -298,7 +260,7 @@
       },
       move: {
         enable: true,
-        speed: 1.5
+        speed: 1
       }
     },
     interactivity: {
@@ -313,13 +275,6 @@
     },
     retina_detect: true
   });
-
-  const scrollBtn = document.getElementById("scrollTop");
-  window.addEventListener("scroll", () => {
-    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  });
 </script>
-
 </body>
 </html>
-<!-- [END OF FILE] -->
