@@ -1,1 +1,144 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinton Njoroge | Software Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill {
+      background: #e0f2fe;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+    }
+    #scrollTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #0f172a;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 50%;
+      display: none;
+      cursor: pointer;
+    }
+    .typewriter > h1 {
+      display: inline-block;
+      border-right: 2px solid #facc15;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="typewriter">
+    <h1>Clinton Njoroge - Full Stack Developer</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I’m Clinton Njoroge, a passionate software developer experienced in Python and JavaScript—particularly with Django and Vue.js. 
+    I've led full-stack teams, built geospatial and productivity applications, and collaborated on diverse international projects.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">Python (Django)</div>
+    <div class="skill">JavaScript (Vue.js)</div>
+    <div class="skill">PostgreSQL, MySQL, MongoDB</div>
+    <div class="skill">Tailwind CSS</div>
+    <div class="skill">Docker, Git, GitLab CI/CD</div>
+    <div class="skill">Jira, Slack, Postman</div>
+    <div class="skill">Unit Testing (Jest, Django)</div>
+    <div class="skill">Linux Server Setup</div>
+    <div class="skill">UI/UX - Figma</div>
+    <div class="skill">Geospatial Analysis</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Geospatial Tool:</strong> Built with Django + Vue.js, deployed on secure Linux servers.</li>
+    <li><strong>Productivity Tracker:</strong> Django backend, Vue frontend, tested with Jest and Selenium.</li>
+    <li><strong>Team Lead Tools:</strong> Led sprints, managed tasks, reviewed Figma designs.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📞 +254 743 631 171</p>
+  <p>✉️ <a href="mailto:clintonmwangi5@gmail.com">clintonmwangi5@gmail.com</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/clinton-mwangi" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<button id="scrollTop" onclick="scrollToTop()">⬆</button>
+
+<script>
+  // Scroll to top button
+  const scrollBtn = document.getElementById("scrollTop");
+  window.onscroll = function () {
+    scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
+
+</body>
+</html>
